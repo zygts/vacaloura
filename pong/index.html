@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pong Game JavaScript</title>
+    <style>
+        body{
+            background-color: #270089;
+        }
+        #pong{
+            border: none;
+            position: absolute;
+            margin :auto;
+            top:0;
+            right:0;
+            left:0;
+            bottom:0;
+        }
+        #juego {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            width: 150px;
+            text-align: center;
+            position:absolute;
+            z-index: 1;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div id="juego">   
+        <canvas id="pong" width="800" height="600"></canvas>
+        <img class="logo" src="img/logo-1.svg">
+    </div>
+   
+   <script src="pong.js"></script>
+</body>
+</html>
