@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>JavaScript/CSS3 Departure Board</title>
+		<link rel="stylesheet" href="./css/departure-board.css" />
+	</head>
+	
+	<body>
+		<div id="test"></div>
+		
+		<script src="./js/departure-board.js"></script>
+		<script>
+
+		var board = new DepartureBoard (document.getElementById ('test'), { rowCount: 1, letterCount: 18 });
+		board.setValue (['HUB','hola','majo']);
+		window.setTimeout (function () {
+			 	board.setValue ('intercambiador');
+			}, 5000);
+		window.clearTimeout();
+		board.setValue (['HUB']);
+		window.setTimeout (function () {
+			 	board.setValue ('intercambiador');
+			}, 5000);
+		window.clearTimeout();
+		</script>
+	</body>
+</html>
