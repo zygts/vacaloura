@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+    height: auto;
+}
+
+#logo-anim {
+    width: 100%;
+    height: 100vh;
+}
