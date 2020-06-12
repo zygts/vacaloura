@@ -54,6 +54,7 @@ section.juego {
     transform: translateY(20px);
     transition: ease-in;
     border-bottom: dotted white 3px;
+    cursor: none;
 }
 
 #bb-parar {
