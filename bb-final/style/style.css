@@ -1,15 +1,250 @@
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    cursor: none;
+  }
+
+  a {
+    cursor: none;
+    text-decoration: none;
+  }
+
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: sofia-pro, sans-serif;
 }
 
 section {
     width: 100%;
     height: auto;
+    position: relative;
+}
+
+section.logo {
+    background-color: #fff;
+    z-index: 1000;
+}
+
+section.juego {
+    background-color: #260f88;
+    z-index: 1000;
 }
 
 #logo-anim {
     width: 100%;
     height: 100vh;
+}
+
+.bb-central {
+    width: 150px;
+    text-align: center;
+    position:absolute;
+    z-index: 1;
+}
+
+#bb-jugar,
+#bb-parar {
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 150px);
+    background: transparent;
+    border: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: ease-in;
+    border-bottom: dotted white 3px;
+}
+
+#bb-parar {
+  left: calc(50% - 96px);
+}
+
+#bb-jugar.animate,
+#bb-parar.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#bb-jugar a,
+#bb-parar a {
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 0.25em;
+    display: block;
+    padding: 20px 0;
+    font-family: sofia-pro, sans-serif;
+}
+
+section.bros {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Hang */
+@-webkit-keyframes hvr-hang {
+    0% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+    50% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+    100% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+  }
+  @keyframes hvr-hang {
+    0% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+    50% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+    100% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+  }
+  @-webkit-keyframes hvr-hang-sink {
+    100% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+  }
+  @keyframes hvr-hang-sink {
+    100% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+  }
+  .hvr-hang {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-hang:hover, .hvr-hang:focus, .hvr-hang:active {
+    -webkit-animation-name: hvr-hang-sink, hvr-hang;
+    animation-name: hvr-hang-sink, hvr-hang;
+    -webkit-animation-duration: .3s, 1.5s;
+    animation-duration: .3s, 1.5s;
+    -webkit-animation-delay: 0s, .3s;
+    animation-delay: 0s, .3s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+  }
+
+  /* Back Pulse */
+@-webkit-keyframes hvr-back-pulse {
+    50% {
+      background-color: rgba(255, 255, 255, 0.24);
+    }
+  }
+  @keyframes hvr-back-pulse {
+    50% {
+      background-color:rgba(255, 255, 255, 0.24);
+    }
+  }
+  .hvr-back-pulse {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+  }
+  .hvr-back-pulse:hover, .hvr-back-pulse:focus, .hvr-back-pulse:active {
+    -webkit-animation-name: hvr-back-pulse;
+    animation-name: hvr-back-pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-color: #2098D1;
+    background-color: #2098d1;
+    color: white;
+  }
+
+
+/* CURSOR */
+
+.cursor {
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+.cursor div {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #FE9BB1;
+  -webkit-transition: opacity .35s ease, -webkit-transform .5s ease;
+  transition: opacity .35s ease, -webkit-transform .5s ease;
+  transition: transform .5s ease, opacity .35s ease;
+  transition: transform .5s ease, opacity .35s ease, -webkit-transform .5s ease;
+}
+.cursor.is-active div {
+  border-width: 1px;
+  -webkit-transform: scale(15);
+          transform: scale(15);
+  opacity: 1;
+}
+
+.cursor.is-active div::after {
+  content: 'Un centro neurálgico en torno al cual se concentra un grupo de bros especialistas que trabajan en un determinado proyecto.';
+  font-size: 0.12em;
+  line-height: 1.12em;
+  padding: 0 2px;
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: 33%;
+  color:#FE9BB1;
+}
+
+.txt {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.link {
+  position: absolute;
+  top: 3rem;
+  font-weight: 900;
+  font-size: 1.1rem;
+}
+.link--1 {
+  margin-left: calc(50vw - 75px);
+  margin-top: 11vh;
+}
+.link--2 {
+  display: none;
 }

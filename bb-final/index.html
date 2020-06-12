@@ -3,15 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Brand Brothers</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/marquee.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zhq0vyf.css">
+    <style>
+        #pong{
+            border: none;
+            position: absolute;
+            margin :auto;
+            top:0;
+            right:0;
+            left:0;
+            bottom:0;
+        }
+        #juego {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+    </style>
 </head>
 <body>
-    <section class="logo">
+
+    <div class="cursor" data-cursor><div></div></div>
+
+    <section class="logo" id="section-hero">
         <div id="logo-anim"></div>
+       <button id="bb-jugar" class="hvr-hang" data-stick-cursor>
+           <a href="#juego">
+            aquí has venido a divertirte
+           </a>
+        </button>
     </section>
 
+    <section class="juego">
+        <div id="juego">   
+            <canvas id="pong" width="750" height="520"></canvas>
+            <img class="bb-central" src="img/logo-1.svg">
+        </div>
+        <button style="cursor: none;" id="bb-parar" class="hvr-hang">
+            <a data-stick-cursor href="#section-bros">
+             llévame a los bros
+            </a>
+         </button>
+    </section>
+
+    <section class="bros" id="section-bros">
+
+        <h2 style="text-align: center; color: black; font-size: 4em; margin: 2em 0;">
+            Somos la NO agencia
+        </h2>
+        <div class="link link--1" data-stick-cursor>Pero qué es un HUB?</div>
+        <div class="link link--2" data-stick-cursor></div>
+
+        <main>
+            <nav class="menu">
+                <div class="menu__item">
+                    <a class="menu__item-link">decimos sí</a>
+                    <img class="menu__item-img" src="img/bb1.jpg" alt="Some image"/>
+                    <div class="marquee">
+                        <div class="marquee__inner" aria-hidden="true">
+                            <span>a la Comunidad de Profesionales y expertos</span>
+                            <span>a la Comunidad de Profesionales y expertos</span>
+                            <span>a la Comunidad de Profesionales y expertos</span>
+                            <span>a la Comunidad de Profesionales y expertos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__item">
+                    <a class="menu__item-link">decimos sí</a>
+                    <img class="menu__item-img" src="img/bb2.jpg" alt="Some image"/>
+                    <div class="marquee">
+                        <div class="marquee__inner" aria-hidden="true">
+                            <span>al Marketing Experiencial</span>
+                            <span>al Marketing Experiencial</span>
+                            <span>al Marketing Experiencial</span>
+                            <span>al Marketing Experiencial</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu__item">
+                    <a class="menu__item-link">decimos sí</a>
+                    <img class="menu__item-img" src="img/bb4.jpg" alt="Some image"/>
+                    <div class="marquee">
+                        <div class="marquee__inner" aria-hidden="true">
+                            <span>a ser una Alternativa en la relación con el cliente </span>
+                            <span>a ser una Alternativa en la relación con el cliente </span>
+                            <span>a ser una Alternativa en la relación con el cliente </span>
+                            <span>a ser una Alternativa en la relación con el cliente </span>
+                        </div>
+                    </div>
+                </div>
+                <div  class="menu__item">
+                    <a class="menu__item-link">decimos sí</a>
+                    <img class="menu__item-img" src="img/bb3.jpg" alt="Some image"/>
+                    <div class="marquee">
+                        <div class="marquee__inner" aria-hidden="true">
+                            <span>a una nueva óptica que aporta vanguardia y eficacia</span>
+                            <span>a una nueva óptica que aporta vanguardia y eficacia</span>
+                            <span>a una nueva óptica que aporta vanguardia y eficacia</span>
+                            <span>a una nueva óptica que aporta vanguardia y eficacia</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </main>
+        
+    </section>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="js/jquery.visible.min.js"></script>
     <script src="js/lottie.js"></script>
     <script src="js/logo.js"></script>
+    <script src="js/pong.js"></script>
+    <script src="js/cursor.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            setTimeout(function(){
+                $('#bb-jugar').addClass('animate');
+                $('#bb-parar').addClass('animate');
+            }, 5000)
+        })
+    </script>
+
 </body>
 </html>
