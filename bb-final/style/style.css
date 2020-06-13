@@ -15,20 +15,29 @@ body {
     font-family: sofia-pro, sans-serif;
 }
 
-section {
-    width: 100%;
-    height: auto;
-    position: relative;
+section.logo {
+  background-color: #fff;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  transition: all .2s ease-out;
 }
 
-section.logo {
-    background-color: #fff;
-    z-index: 1000;
+section.logo.fade-out {
+  opacity: 0;
 }
 
 section.juego {
-    background-color: #260f88;
-    z-index: 1000;
+  background-color: #260f88;
+  z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
 }
 
 #logo-anim {
@@ -54,7 +63,6 @@ section.juego {
     transform: translateY(20px);
     transition: ease-in;
     border-bottom: dotted white 3px;
-    cursor: none;
 }
 
 #bb-parar {
@@ -79,7 +87,22 @@ section.juego {
     font-family: sofia-pro, sans-serif;
 }
 
+.boton-volver {
+  background: rgba(255, 255, 255, 0.7294117647058823);
+  width: 750px;
+  z-index: 999;
+  height: 520px;
+  border: none;
+  border-radius: 0;
+  font-size: 50px;
+  font-weight: 900;
+  font-family: sofia-pro, sans-serif;
+  color: #260f88;
+  cursor: pointer;
+}
+
 section.bros {
+  position: relative;
   min-height: 100vh;
   width: 100%;
 }

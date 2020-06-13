@@ -15,13 +15,4 @@ function start(){
 anim = bodymovin.loadAnimation(animdata);
 }
 
-/*
-anim.addEventListener('complete',stopa);
-}
-
-function stopa(){
-    document.getElementById("logo-anim").style.display = "none";
-}
-*/
-
 start();

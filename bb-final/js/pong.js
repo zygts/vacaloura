@@ -72,7 +72,9 @@ function drawArc(x, y, r, color){
 }
 
 // listening to the mouse
-canvas.addEventListener("mousemove", getMousePos);
+let theGame = document.getElementById('juego');
+
+let whereisMouse = theGame.addEventListener("mousemove", getMousePos);
 
 function getMousePos(evt){
     let rect = canvas.getBoundingClientRect();
@@ -209,11 +211,30 @@ function game(){
 
 let botonJugar = document.getElementById('bb-jugar');
 let botonParar = document.getElementById('bb-parar');
+let seccionLogo = document.getElementById('section-hero');
+let seccionJuego = document.getElementById('juego');
+
+let volveraJugar = document.createElement('button');
+
 
 botonJugar.onclick = function jugar(){
     var loop = setInterval(game,18);
+
     botonParar.onclick = function parar(){
         clearInterval(loop);
-    }
-}
+        setTimeout(function(){
+            seccionJuego.appendChild(volveraJugar);
+            volveraJugar.innerHTML = 'volver a jugar';
+            volveraJugar.classList.add('boton-volver');
+        }, 500)
+    };
+    seccionLogo.classList.add('fade-out');
+    setTimeout(function(){
+        seccionLogo.style.display = "none";
+    }, 500);
+};
 
+volveraJugar.onclick = function jugar(){
+    var loop = setInterval(game,18);
+    seccionJuego.removeChild(volveraJugar);
+};
