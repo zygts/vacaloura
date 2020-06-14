@@ -21,6 +21,10 @@
 	font-family: sofia-pro, sans-serif;
 }
 
+main {
+	margin-top: 10%;
+}
+
 /* Grainy texture animation by Geoff Graham https://css-tricks.com/snippets/css/animated-grainy-texture/ */
 
 main::before {

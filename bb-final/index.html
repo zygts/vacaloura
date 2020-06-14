@@ -54,11 +54,12 @@
 
     <section class="bros" id="section-bros">
 
-        <h2 style="text-align: center; color: black; font-size: 4em; margin: 2em 0;">
-            Somos la NO agencia
-        </h2>
+        <h2>Somos la <br>NO<br> agencia</h2>
+        <h4>porque somos un</h4>
+        <div class="aeropuerto">
+            <div id="test"></div>
+        </div>
         <div class="link link--1" data-stick-cursor>¿qué es un HUB?</div>
-        <div class="link link--2" data-stick-cursor></div>
 
         <main>
             <nav class="menu">
@@ -121,7 +122,8 @@
     <script src="js/logo.js"></script>
     <script src="js/pong.js"></script>
     <script src="js/cursor.js"></script>
-
+    <script src="./js/departure-board.js"></script>
+    
     <script>
         $(document).ready(function(){
             setTimeout(function(){
@@ -131,5 +133,65 @@
         })
     </script>
 
+    <script>
+    
+    var board = new DepartureBoard (document.getElementById ('test'), { rowCount: 1, letterCount: 17 });
+
+    board.setValue (['HUB']);
+    
+    window.setTimeout(function() {
+        board.setValue ('intercambiador');
+        window.setTimeout (function () {
+            board.setValue ('punto de conexion');
+            window.setTimeout (function () {
+                board.setValue (['HUB']);
+                window.setTimeout (function () {
+                    board.setValue (['intercambiador']);
+                    window.setTimeout (function () {
+                        board.setValue (['punto de conexion']);
+                        window.setTimeout (function () {
+                            board.setValue (['hub']);
+                            window.setTimeout (function () {
+                                board.setValue (['intercambiador']);
+                                window.setTimeout (function () {
+                                    board.setValue (['punto de conexion']);
+                                    window.setTimeout (function () {
+                                        board.setValue (['hub']);
+                                        window.setTimeout (function () {
+                                            board.setValue (['intercambiador']);
+                                            window.setTimeout (function () {
+                                                board.setValue (['punto de conexion']);
+                                                window.setTimeout (function () {
+                                                    board.setValue (['hub']);
+                                                    window.setTimeout (function () {
+                                                        board.setValue (['intercambiador']);
+                                                        window.setTimeout (function () {
+                                                            board.setValue (['punto de conexion']);
+                                                            window.setTimeout (function () {
+                                                                board.setValue (['hub']);
+                                                                window.setTimeout (function () {
+                                                                    board.setValue (['intercambiador']);
+                                                                    window.setTimeout (function () {
+                                                                        board.setValue (['punto de conexion']);
+                                                                    }, 10000);
+                                                                }, 10000);
+                                                            }, 10000);
+                                                        }, 10000);
+                                                    }, 10000);
+                                                }, 10000);
+                                            }, 10000);
+                                        }, 10000);
+                                    }, 10000);
+                                }, 10000);
+                            }, 10000);
+                        }, 10000);
+                    }, 10000);
+                }, 10000);
+            }, 10000);
+        }, 10000);
+    }, 10000);
+
+</script>
+<div class="link link--2" data-stick-cursor></div>
 </body>
 </html>
