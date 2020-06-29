@@ -2,6 +2,7 @@ html {
     scroll-behavior: smooth;
     box-sizing: border-box;
     cursor: none;
+    overflow-x: hidden;
   }
 
   a {
@@ -13,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sofia-pro, sans-serif;
+    background-color: #260f88;
 }
 
 section.logo {
@@ -238,10 +240,11 @@ section.bros {
   -webkit-transform: scale(15);
           transform: scale(15);
   opacity: 1;
+  background: white;
 }
 
 .cursor.is-active div::after {
-  content: 'Un centro neurálgico en torno al cual se concentra un grupo de bros especialistas que trabajan en un determinado proyecto.';
+  content: 'Un centro neurálgico en el que se concentra un grupo de bros especialistas que trabajan en un determinado proyecto.';
   font-size: 0.12em;
   line-height: 1.12em;
   padding: 0 2px;
@@ -250,6 +253,7 @@ section.bros {
   position: absolute;
   top: 33%;
   color:#FE9BB1;
+  font-family: sofia-pro, sans-serif;
 }
 
 .txt {
@@ -291,7 +295,7 @@ section.bros {
     padding:  0.36em;
     display: inline-block;
 	line-height: 1.3em;
-  background: #3F51B5;
+  background: #260f88;
     -webkit-border-radius: 0.21em;
     -moz-border-radius: 0.21em;
     border-radius: 0.21em;
@@ -313,15 +317,15 @@ section.bros {
 
 .departure-board span.letter {
 	-webkit-box-shadow: 
-  inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(18, 28, 86), inset 0.14em 0 0.28em #3F51B5, inset -0.14em 0 0.28em rgb(8, 19, 82), 0 0.07em 0 rgba(255, 255, 255, .2); 
+  inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(18, 28, 86), inset 0.14em 0 0.28em #260f88, inset -0.14em 0 0.28em rgb(8, 19, 82), 0 0.07em 0 rgba(255, 255, 255, .2); 
 
 	-moz-box-shadow: 
-  inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(18, 28, 86), inset 0.14em 0 0.28em #3F51B5, inset -0.14em 0 0.28em rgb(8, 19, 82), 0 0.07em 0 rgba(255, 255, 255, .2);
+  inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(18, 28, 86), inset 0.14em 0 0.28em #260f88, inset -0.14em 0 0.28em rgb(8, 19, 82), 0 0.07em 0 rgba(255, 255, 255, .2);
 
 	-o-box-shadow: 
-  inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(18, 28, 86), inset 0.14em 0 0.28em #3F51B5, inset -0.14em 0 0.28em rgb(8, 19, 82), 0 0.07em 0 rgba(255, 255, 255, .2);
+  inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(18, 28, 86), inset 0.14em 0 0.28em #260f88, inset -0.14em 0 0.28em rgb(8, 19, 82), 0 0.07em 0 rgba(255, 255, 255, .2);
 
-    box-shadow: inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(18, 28, 86), inset 0.14em 0 0.28em #3F51B5, inset -0.14em 0 0.28em rgb(8, 19, 82), 0 0.07em 0 rgba(255, 255, 255, .2);
+    box-shadow: inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(18, 28, 86), inset 0.14em 0 0.28em #260f88, inset -0.14em 0 0.28em rgb(8, 19, 82), 0 0.07em 0 rgba(255, 255, 255, .2);
   }
 
 
@@ -418,7 +422,7 @@ section.bros {
 
 section.bros h2 {
   text-align: center;
-  color: #3F51B5;
+  color: #260f88;
   font-size: 5em;
   font-weight: 400;
   letter-spacing: 0;
@@ -433,10 +437,138 @@ section.bros h2 {
 
 section.bros h4 {
   text-align: center;
-  color: #3F51B5;
+  color: #260f88;
   font-size: 2em;
   letter-spacing: 0;
   margin: 0 0 2em;
+}
+
+/* WEBCAM */
+
+.hidden {
+  display: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: calc(100vh - 13rem);
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+#start-webcam-btn,
+#yaloeras {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#boton-parar {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #260f88;
+  color: white;
+  font-family: sofia-pro, sans-serif;
+  line-height: 100px;
+  font-weight: 900;
+  text-align: center;
+  cursor: pointer;
+  transform: scale(.85);
+  transition: all .15s ease;
+}
+
+#boton-parar:hover {
+  transform: scale(1);
+}
+
+.webcam-brother {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #FE9BB1;
+}
+
+#start-webcam-btn {
+  -webkit-appearance: none;
+  border: none;
+  background: #260f88;
+  color: #fe9bb1;
+  padding: 20px 40px;
+  border-radius: 40px;
+  font-family: sofia-pro, sans-serif;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+#yaloeras {
+  font-size: 5em;
+  font-weight: 900;
+  color: #fe9bb1;
+  text-align: center;
+  font-family: sans-serif;
+  line-height: 1;
+  transition: all 1s ease;
+  z-index: 1;
+  font-family: sofia-pro, sans-serif;
+}
+
+.fondo-video {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #260f88;
+  position: absolute;
+}
+
+#contact-btn {
+  bottom: 100px;
+  position: absolute;
+  left: 50%;
+  padding: 15px 0;
+  transform: translateX(-50%);
+  z-index: 2;
+    background: transparent;
+    border: none;
+    border-bottom: dotted #fe9bb1 3px;
+    cursor: none;
+}
+
+#contact-btn a {
+  font-size: 15px;
+  font-weight: 900;
+  color: #fe9bb1;
+  font-family: sofia-pro, sans-serif;
+  letter-spacing: 0.25em;
+}
+
+#yaloeras.off {
+  transform: translate(-50%, -50%)scale(.75);
+  color: white;
+}
+
+.content.no-events {
+  pointer-events: none;
+}
+
+@media screen and (min-width: 53em) {
+  .message {
+      display: none;
+  }
+
+  .content {
+      height: 100vh;
+      justify-content: center;
+  }
 }
 
 
@@ -488,6 +620,63 @@ section.bros h4 {
   margin: -60px;
   -webkit-animation: skewing 8s 1.5s ease-in-out infinite;
           animation: skewing 8s 1.5s ease-in-out infinite;
+}
+
+
+/* GIF */
+
+.section-gif {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+}
+
+#gif-wrap {
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #260f88;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+#gif-logo {
+  display: none;
+}
+
+#new-gif {
+  font-family: sofia-pro, sans-serif;
+  padding: 1em 3em;
+  letter-spacing: 0.05em;
+  font-size: 18px!important;
+  font-weight: 900;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  color: #fff;
+  border-radius: 50px;
+  border: 0;
+  font-size: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transition: background .15s ease;
+  transition: background .15s ease;
+  cursor: pointer;
+}
+
+#new-gif:hover {
+  background: rgba(254, 155, 177, 1);
+}
+
+#new-gif:focus {
+  outline: none;
 }
 
 @-webkit-keyframes skewing {
