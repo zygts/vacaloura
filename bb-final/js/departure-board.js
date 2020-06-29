@@ -200,4 +200,3 @@ DepartureBoard.Letter.prototype._tick = function () {
 		delete this._interval;
 	}
 };
-

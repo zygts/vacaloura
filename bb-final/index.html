@@ -28,14 +28,14 @@
     </style>
 </head>
 <body>
-
+    <div class="link link--2" data-stick-cursor></div>
     <div class="cursor" data-cursor><div></div></div>
 
     <section class="logo" id="section-hero">
         <div id="logo-anim"></div>
-       <button id="bb-jugar" class="hvr-hang" data-stick-cursor>
+       <button id="bb-jugar" class="hvr-hang">
            <a href="#juego">
-            aquí has venido a divertirte
+            aquí vivimos de experiencias
            </a>
         </button>
     </section>
@@ -46,7 +46,7 @@
             <img class="bb-central" src="img/logo-1.svg" style="">
         </div>
         <button style="cursor: none;" id="bb-parar" class="hvr-hang">
-            <a data-stick-cursor href="#section-bros">
+            <a href="#section-bros">
              Para y llévame a los bros
             </a>
          </button>
@@ -54,7 +54,7 @@
 
     <section class="bros" id="section-bros">
 
-        <div class="noagencia">
+        <div class="noagencia" data-scroll>
             <h2>Somos la <br><span style="font-weight:900;">NO</span><br> agencia</h2>
             <div class="blob">
                 <p></p>
@@ -75,10 +75,10 @@
                     <img class="menu__item-img" src="img/bb1.jpg" alt="Some image"/>
                     <div class="marquee">
                         <div class="marquee__inner" aria-hidden="true">
-                            <span>a la Comunidad de Profesionales y expertos</span>
-                            <span>a la Comunidad de Profesionales y expertos</span>
-                            <span>a la Comunidad de Profesionales y expertos</span>
-                            <span>a la Comunidad de Profesionales y expertos</span>
+                            <span>A la Comunidad de profesionales y expertos</span>
+                            <span>A la Comunidad de profesionales y expertos</span>
+                            <span>A la Comunidad de profesionales y expertos</span>
+                            <span>A la Comunidad de profesionales y expertos</span>
                         </div>
                     </div>
                 </div>
@@ -87,10 +87,10 @@
                     <img class="menu__item-img" src="img/bb2.jpg" alt="Some image"/>
                     <div class="marquee">
                         <div class="marquee__inner" aria-hidden="true">
-                            <span>al Marketing Experiencial</span>
-                            <span>al Marketing Experiencial</span>
-                            <span>al Marketing Experiencial</span>
-                            <span>al Marketing Experiencial</span>
+                            <span>Al Marketing experiencial</span>
+                            <span>Al Marketing experiencial</span>
+                            <span>Al Marketing experiencial</span>
+                            <span>Al Marketing experiencial</span>
                         </div>
                     </div>
                 </div>
@@ -99,10 +99,10 @@
                     <img class="menu__item-img" src="img/bb4.jpg" alt="Some image"/>
                     <div class="marquee">
                         <div class="marquee__inner" aria-hidden="true">
-                            <span>a ser una Alternativa en la relación con el cliente </span>
-                            <span>a ser una Alternativa en la relación con el cliente </span>
-                            <span>a ser una Alternativa en la relación con el cliente </span>
-                            <span>a ser una Alternativa en la relación con el cliente </span>
+                            <span>A ser una alternativa en la relación con el cliente </span>
+                            <span>A ser una alternativa en la relación con el cliente </span>
+                            <span>A ser una alternativa en la relación con el cliente </span>
+                            <span>A ser una alternativa en la relación con el cliente </span>
                         </div>
                     </div>
                 </div>
@@ -111,10 +111,10 @@
                     <img class="menu__item-img" src="img/bb3.jpg" alt="Some image"/>
                     <div class="marquee">
                         <div class="marquee__inner" aria-hidden="true">
-                            <span>a una nueva óptica que aporta vanguardia y eficacia</span>
-                            <span>a una nueva óptica que aporta vanguardia y eficacia</span>
-                            <span>a una nueva óptica que aporta vanguardia y eficacia</span>
-                            <span>a una nueva óptica que aporta vanguardia y eficacia</span>
+                            <span>A una nueva óptica que aporta vanguardia y eficacia</span>
+                            <span>A una nueva óptica que aporta vanguardia y eficacia</span>
+                            <span>A una nueva óptica que aporta vanguardia y eficacia</span>
+                            <span>A una nueva óptica que aporta vanguardia y eficacia</span>
                         </div>
                     </div>
                 </div>
@@ -122,14 +122,41 @@
         </main>
         
     </section>
+    
+    <section class="webcam-brother">
+        <button id="start-webcam-btn">Haz click para ser un brother</button>
+        <div id="content" class="content">
+            <span id="yaloeras" class="hidden">Ya eras un brother, no lo sabías?</span>
+            <video id="video" class="hidden"></video>
+            <div id="message" class="hidden">Please allow camera access.</div>
+            <div id="boton-parar" class="hidden">Para esto!</div>
+        </div>
+        <button id="contact-btn" class="hidden">
+            <a href="#" onClick="window.location.reload(); return false;">
+                contacta ahora
+               </a></button>
+    </section>
+
+    <section class="section-gif">
+        <div id="gif-wrap"></div>
+        <div id="gif-logo"><img src="https://storage.googleapis.com/chydlx/codepen/random-gif-generator/giphy-logo.gif"/></div>
+        <button id="new-gif">dame más</button>
+    </section>
+
+    <section class="section-contact" id="contacto">
+        
+    </section>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="js/jquery.visible.min.js"></script>
     <script src="js/lottie.js"></script>
     <script src="js/logo.js"></script>
     <script src="js/pong.js"></script>
     <script src="js/cursor.js"></script>
-    <script src="./js/departure-board.js"></script>
+    <script src="js/departure-board.js"></script>
+    <script src="js/webcam.js"></script>
+    <script src="js/gif.js"></script>
     
     <script>
         $(document).ready(function(){
@@ -141,64 +168,86 @@
     </script>
 
     <script>
-    
-    var board = new DepartureBoard (document.getElementById ('test'), { rowCount: 1, letterCount: 17 });
+        var board = new DepartureBoard (document.getElementById ('test'), { rowCount: 1, letterCount: 17 });
 
-    board.setValue (['HUB']);
-    
-    window.setTimeout(function() {
-        board.setValue ('intercambiador');
-        window.setTimeout (function () {
-            board.setValue ('punto de conexion');
-            window.setTimeout (function () {
-                board.setValue (['HUB']);
-                window.setTimeout (function () {
-                    board.setValue (['intercambiador']);
-                    window.setTimeout (function () {
-                        board.setValue (['punto de conexion']);
-                        window.setTimeout (function () {
-                            board.setValue (['hub']);
-                            window.setTimeout (function () {
-                                board.setValue (['intercambiador']);
-                                window.setTimeout (function () {
-                                    board.setValue (['punto de conexion']);
-                                    window.setTimeout (function () {
-                                        board.setValue (['hub']);
-                                        window.setTimeout (function () {
-                                            board.setValue (['intercambiador']);
-                                            window.setTimeout (function () {
-                                                board.setValue (['punto de conexion']);
-                                                window.setTimeout (function () {
-                                                    board.setValue (['hub']);
-                                                    window.setTimeout (function () {
-                                                        board.setValue (['intercambiador']);
-                                                        window.setTimeout (function () {
-                                                            board.setValue (['punto de conexion']);
-                                                            window.setTimeout (function () {
-                                                                board.setValue (['hub']);
-                                                                window.setTimeout (function () {
-                                                                    board.setValue (['intercambiador']);
-                                                                    window.setTimeout (function () {
-                                                                        board.setValue (['punto de conexion']);
-                                                                    }, 10000);
-                                                                }, 10000);
-                                                            }, 10000);
-                                                        }, 10000);
-                                                    }, 10000);
-                                                }, 10000);
-                                            }, 10000);
-                                        }, 10000);
-                                    }, 10000);
-                                }, 10000);
-                            }, 10000);
-                        }, 10000);
-                    }, 10000);
-                }, 10000);
-            }, 10000);
-        }, 10000);
-    }, 10000);
-
-</script>
-<div class="link link--2" data-stick-cursor></div>
+const airportLoop = function(){
+	board.setValue (['HUB']);
+		window.setTimeout(function() {
+			board.setValue ('intercambiador');
+			window.setTimeout (function () {
+				board.setValue ('punto de conexion');
+				window.setTimeout (function () {
+					board.setValue (['HUB']);
+					window.setTimeout (function () {
+						board.setValue (['intercambiador']);
+						window.setTimeout (function () {
+							board.setValue (['punto de conexion']);
+							window.setTimeout (function () {
+								board.setValue (['hub']);
+								window.setTimeout (function () {
+									board.setValue (['intercambiador']);
+									window.setTimeout (function () {
+										board.setValue (['punto de conexion']);
+										window.setTimeout (function () {
+											board.setValue (['hub']);
+											window.setTimeout (function () {
+												board.setValue (['intercambiador']);
+												window.setTimeout (function () {
+													board.setValue (['punto de conexion']);
+													window.setTimeout (function () {
+														board.setValue (['hub']);
+														window.setTimeout (function () {
+															board.setValue (['intercambiador']);
+															window.setTimeout (function () {
+																board.setValue (['punto de conexion']);
+																window.setTimeout (function () {
+																	board.setValue (['hub']);
+																	window.setTimeout (function () {
+																		board.setValue (['intercambiador']);
+																		window.setTimeout (function () {
+                                                                            board.setValue (['punto de conexion']);
+                                                                            window.setTimeout (function () {
+                                                                                board.setValue (['hub']);
+                                                                                window.setTimeout (function () {
+                                                                                    board.setValue (['intercambiador']);
+                                                                                    window.setTimeout (function () {
+                                                                                        board.setValue (['punto de conexion']);
+                                                                                        window.setTimeout (function () {
+                                                                                            board.setValue (['hub']);
+                                                                                            window.setTimeout (function () {
+                                                                                                board.setValue (['intercambiador']);
+                                                                                                window.setTimeout (function () {
+                                                                                                    board.setValue (['punto de conexion']);
+                                                                                                }, 7000);
+                                                                                            }, 7000);
+                                                                                        }, 7000);
+                                                                                    }, 7000);
+                                                                                }, 7000);
+                                                                            }, 7000);
+																		}, 7000);
+																	}, 7000);
+																}, 7000);
+															}, 7000);
+														}, 7000);
+													}, 7000);
+												}, 7000);
+											}, 7000);
+										}, 7000);
+									}, 7000);
+								}, 7000);
+							}, 7000);
+						}, 7000);
+					}, 7000);
+				}, 7000);
+			}, 7000);
+		}, 7000);
+	}
+	console.clear();
+	ScrollOut({
+		onShown: function(el) {
+			airportLoop();
+		}
+	});
+    </script>
 </body>
 </html>
