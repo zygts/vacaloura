@@ -55,7 +55,8 @@ section.juego {
 }
 
 #bb-jugar,
-#bb-parar {
+#bb-parar,
+#bb-contacto {
     position: absolute;
     bottom: 50px;
     left: calc(50% - 150px);
@@ -67,17 +68,15 @@ section.juego {
     border-bottom: dotted white 3px;
 }
 
-#bb-parar {
-  
-}
-
 #bb-jugar.animate,
+#bb-contacto.animate,
 #bb-parar.animate {
   opacity: 1;
   transform: translateY(0);
 }
 
 #bb-jugar a,
+#bb-contacto a,
 #bb-parar a {
     color: white;
     font-size: 15px;
@@ -87,6 +86,16 @@ section.juego {
     display: block;
     padding: 20px 0;
     font-family: sofia-pro, sans-serif;
+}
+
+#bb-contacto {
+  opacity: 1;
+  left: calc(50% - 130px);
+}
+
+#bb-contacto:hover,
+#bb-contacto a:hover {
+  transform: none;
 }
 
 .boton-volver {
@@ -443,6 +452,14 @@ section.bros h4 {
   margin: 0 0 2em;
 }
 
+.section-gif h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 2em;
+  letter-spacing: 0;
+  margin: 2em;
+}
+
 /* WEBCAM */
 
 .hidden {
@@ -492,7 +509,7 @@ section.bros h4 {
 
 .webcam-brother {
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   position: relative;
   background-color: #FE9BB1;
 }
