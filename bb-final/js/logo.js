@@ -9,7 +9,7 @@ function start(){
             progressiveLoad: false,
             preserveAspectRatio: "xMidYMax slice"
           },
-        path: "js/logo-anim.json"
+        path: "js/logo-anim2.json"
     };
 
 anim = bodymovin.loadAnimation(animdata);

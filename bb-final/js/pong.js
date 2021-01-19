@@ -24,7 +24,7 @@ const ball = {
     velocityY : 5,
     speed : 10,
     zIndex: 10,
-    color : "#fff"
+    color : "#FE9BB1"
 }
 
 // User Paddle
@@ -34,7 +34,7 @@ const user = {
     width : 10,
     height : 100,
     score : 0,
-    color : "WHITE"
+    color : "#FE9BB1"
 }
 
 // COM Paddle
@@ -44,7 +44,7 @@ const com = {
     width : 10,
     height : 100,
     score : 0,
-    color : "WHITE"
+    color : "#FE9BB1"
 }
 
 // NET
@@ -53,7 +53,7 @@ const net = {
     y : 0,
     height : 10,
     width : 2,
-    color : "WHITE"
+    color : "#FE9BB1"
 }
 
 // draw a rectangle, will be used to draw paddles
@@ -99,7 +99,7 @@ function drawNet(){
 
 // draw text
 function drawText(text,x,y){
-    ctx.fillStyle = "#FFF";
+    ctx.fillStyle = "#FE9BB1";
     ctx.font = "65px helvetica";
     ctx.fillText(text, x, y);
 }
@@ -180,7 +180,7 @@ function update(){
 function render(){
     
     // clear the canvas
-    drawRect(0, 0, canvas.width, canvas.height, "#FE9BB1");
+    drawRect(0, 0, canvas.width, canvas.height, "#181A18");
     
     // draw the user score to the left
     drawText(user.score,canvas.width/6,canvas.height/5);

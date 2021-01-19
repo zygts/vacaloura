@@ -6,7 +6,8 @@
     <title>Brand Brothers</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/marquee.css">
-    <link rel="stylesheet" href="https://use.typekit.net/zhq0vyf.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         #pong{
             border: none;
@@ -28,14 +29,14 @@
     </style>
 </head>
 <body>
-    <div class="link link--2" data-stick-cursor></div>
+    <!-- <div class="link link--2" data-stick-cursor></div> -->
     <div class="cursor" data-cursor><div></div></div>
 
     <section class="logo" id="section-hero">
         <div id="logo-anim"></div>
        <button id="bb-jugar" class="hvr-hang">
            <a href="#juego">
-            aquí vivimos de experiencias
+            creamos experiencias
            </a>
         </button>
     </section>
@@ -47,7 +48,7 @@
         </div>
         <button style="cursor: none;" id="bb-parar" class="hvr-hang">
             <a href="#section-bros">
-             Para y llévame a los bros
+             Paso de jugar más, llévame a los bros
             </a>
          </button>
     </section>
@@ -55,7 +56,7 @@
     <section class="bros" id="section-bros">
 
         <div class="noagencia" data-scroll>
-            <h2>Somos la <br><span style="font-weight:900;">NO</span><br> agencia</h2>
+            <h2>Somos la <br><span style="color: black">no</span><br> agencia</h2>
             <div class="blob">
                 <p></p>
                 <p><span></span></p>
@@ -68,58 +69,10 @@
         </div>
         <div class="link link--1" data-stick-cursor>¿qué es un HUB?</div>
 
-        <main>
-            <nav class="menu">
-                <div class="menu__item">
-                    <a class="menu__item-link">decimos sí</a>
-                    <img class="menu__item-img" src="img/bb1.jpg" alt="Some image"/>
-                    <div class="marquee">
-                        <div class="marquee__inner" aria-hidden="true">
-                            <span>A la Comunidad de profesionales y expertos</span>
-                            <span>A la Comunidad de profesionales y expertos</span>
-                            <span>A la Comunidad de profesionales y expertos</span>
-                            <span>A la Comunidad de profesionales y expertos</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__item">
-                    <a class="menu__item-link">decimos sí</a>
-                    <img class="menu__item-img" src="img/bb2.jpg" alt="Some image"/>
-                    <div class="marquee">
-                        <div class="marquee__inner" aria-hidden="true">
-                            <span>Al Marketing experiencial</span>
-                            <span>Al Marketing experiencial</span>
-                            <span>Al Marketing experiencial</span>
-                            <span>Al Marketing experiencial</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__item">
-                    <a class="menu__item-link">decimos sí</a>
-                    <img class="menu__item-img" src="img/bb4.jpg" alt="Some image"/>
-                    <div class="marquee">
-                        <div class="marquee__inner" aria-hidden="true">
-                            <span>A ser una alternativa en la relación con el cliente </span>
-                            <span>A ser una alternativa en la relación con el cliente </span>
-                            <span>A ser una alternativa en la relación con el cliente </span>
-                            <span>A ser una alternativa en la relación con el cliente </span>
-                        </div>
-                    </div>
-                </div>
-                <div  class="menu__item">
-                    <a class="menu__item-link">decimos sí</a>
-                    <img class="menu__item-img" src="img/bb3.jpg" alt="Some image"/>
-                    <div class="marquee">
-                        <div class="marquee__inner" aria-hidden="true">
-                            <span>A una nueva óptica que aporta vanguardia y eficacia</span>
-                            <span>A una nueva óptica que aporta vanguardia y eficacia</span>
-                            <span>A una nueva óptica que aporta vanguardia y eficacia</span>
-                            <span>A una nueva óptica que aporta vanguardia y eficacia</span>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </main>
+        <div class="descripcion">
+            <p>Nuestra comunidad de expertos crea experiencias con equipos adhoc.</p>
+            <p>No son proveedores, son Partners en todo tipo de proyectos con un carácter sostenible, vanguardista<br> y eficaz.</p>
+        </div>
         
     </section>
     
@@ -132,7 +85,7 @@
             <div id="boton-parar" class="hidden">Para esto!</div>
         </div>
         <button id="contact-btn" class="hidden">
-            <a href="https://rodrek82.netlify.app/bb-final/contacto/">
+            <a href="/contacto/">
                 contacta ahora
                </a></button>
     </section>
@@ -144,11 +97,15 @@
         <button id="new-gif">dame más</button>
 
         <button id="bb-contacto" class="hvr-hang">
-            <a href="https://rodrek82.netlify.app/bb-final/contacto/">
+            <a href="/contacto/">
              Contacta con nosotros
             </a>
          </button>
     </section>
+
+    <div id="pixlee_container"></div>
+    <script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'null'});Pixlee.addSimpleWidget({widgetId:'null'});};</script>
+    <script src="//instafeed.assets.pxlecdn.com/assets/pixlee_widget_1_0_0.js"></script>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>

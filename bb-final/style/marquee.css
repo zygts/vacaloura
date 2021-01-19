@@ -18,7 +18,7 @@
 	background-color: var(--color-bg);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: sofia-pro, sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 main {
@@ -130,7 +130,7 @@ main::before {
 
 #section-bros .menu__item-link::before {
 	all: initial;
-	font-family: sofia-pro, sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	counter-increment: menu;
 	content:  counter(menu);
 	position: absolute;

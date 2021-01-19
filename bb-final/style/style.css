@@ -13,8 +13,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: sofia-pro, sans-serif;
-    background-color: #260f88;
+    font-family: 'Montserrat', sans-serif;
 }
 
 section.logo {
@@ -34,7 +33,7 @@ section.logo.fade-out {
 }
 
 section.juego {
-  background-color: #260f88;
+  background-color: #0ECDB4;
   z-index: 1;
   position: relative;
   top: 0;
@@ -59,13 +58,14 @@ section.juego {
 #bb-contacto {
     position: absolute;
     bottom: 50px;
-    left: calc(50% - 150px);
+    left: 50%;
+    transform: translateX(-50%)!important;
     background: transparent;
     border: none;
     opacity: 0;
     transform: translateY(20px);
     transition: ease-in;
-    border-bottom: dotted white 3px;
+    border-bottom: dotted #181A18 3px;
 }
 
 #bb-jugar.animate,
@@ -78,14 +78,14 @@ section.juego {
 #bb-jugar a,
 #bb-contacto a,
 #bb-parar a {
-    color: white;
+    color: #181A18;
     font-size: 15px;
     font-weight: 900;
     text-decoration: none;
     letter-spacing: 0.25em;
     display: block;
     padding: 20px 0;
-    font-family: sofia-pro, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #bb-contacto {
@@ -99,7 +99,7 @@ section.juego {
 }
 
 .boton-volver {
-  background: rgba(255, 255, 255, 0.7294117647058823);
+  background: rgba(255, 255, 255, 0.85);
   width: 750px;
   z-index: 999;
   height: 520px;
@@ -107,8 +107,8 @@ section.juego {
   border-radius: 0;
   font-size: 50px;
   font-weight: 900;
-  font-family: sofia-pro, sans-serif;
-  color: #260f88;
+  font-family: 'Montserrat', sans-serif;
+  color: #181A18;
   cursor: pointer;
 }
 
@@ -116,7 +116,7 @@ section.bros {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  padding-top: 8em;
+  padding-top: 10em;
 }
 
 /* Hang */
@@ -238,7 +238,7 @@ section.bros {
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
-  border: 2px solid #FE9BB1;
+  border: 2px solid #181A18;
   -webkit-transition: opacity .35s ease, -webkit-transform .5s ease;
   transition: opacity .35s ease, -webkit-transform .5s ease;
   transition: transform .5s ease, opacity .35s ease;
@@ -262,7 +262,7 @@ section.bros {
   position: absolute;
   top: 33%;
   color:#FE9BB1;
-  font-family: sofia-pro, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .txt {
@@ -282,7 +282,7 @@ section.bros {
 .link--1 {
   left: auto;
     right: 24%;
-    top: 600px;
+    top: 720px;
     color: #FE9BB1;
 }
 .link--2 {
@@ -304,7 +304,7 @@ section.bros {
     padding:  0.36em;
     display: inline-block;
 	line-height: 1.3em;
-  background: #260f88;
+  background: #181A18;
     -webkit-border-radius: 0.21em;
     -moz-border-radius: 0.21em;
     border-radius: 0.21em;
@@ -312,7 +312,6 @@ section.bros {
 	font-family: Helvetica;
 	transform: scale(2.5);
 }
-
 
 .departure-board span.letter {
 	display: inline-block;
@@ -323,20 +322,18 @@ section.bros {
 	position: relative;
 }
 
-
 .departure-board span.letter {
 	-webkit-box-shadow: 
-  inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(18, 28, 86), inset 0.14em 0 0.28em #260f88, inset -0.14em 0 0.28em rgb(8, 19, 82), 0 0.07em 0 rgba(255, 255, 255, .2); 
+  inset 0 -0.07em 0 rgb(39, 39, 39), inset 0 -0.14em 0 rgb(36, 36, 36), inset 0.14em 0 0.28em #181A18, inset -0.14em 0 0.28em rgb(54, 54, 54), 0 0.07em 0 rgba(255, 255, 255, .2); 
 
 	-moz-box-shadow: 
-  inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(18, 28, 86), inset 0.14em 0 0.28em #260f88, inset -0.14em 0 0.28em rgb(8, 19, 82), 0 0.07em 0 rgba(255, 255, 255, .2);
+  inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(66, 66, 66), inset 0.14em 0 0.28em #181A18, inset -0.14em 0 0.28em rgb(75, 75, 75), 0 0.07em 0 rgba(255, 255, 255, .2);
 
 	-o-box-shadow: 
-  inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(18, 28, 86), inset 0.14em 0 0.28em #260f88, inset -0.14em 0 0.28em rgb(8, 19, 82), 0 0.07em 0 rgba(255, 255, 255, .2);
+  inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(73, 73, 73), inset 0.14em 0 0.28em #181A18, inset -0.14em 0 0.28em rgb(59, 59, 59), 0 0.07em 0 rgba(255, 255, 255, .2);
 
-    box-shadow: inset 0 -0.07em 0 rgb(15, 29, 107), inset 0 -0.14em 0 rgb(18, 28, 86), inset 0.14em 0 0.28em #260f88, inset -0.14em 0 0.28em rgb(8, 19, 82), 0 0.07em 0 rgba(255, 255, 255, .2);
+    box-shadow: inset 0 -0.07em 0 rgb(54, 54, 54), inset 0 -0.14em 0 rgb(63, 63, 63), inset 0.14em 0 0.28em #181A18, inset -0.14em 0 0.28em rgb(61, 61, 61), 0 0.07em 0 rgba(255, 255, 255, .2);
   }
-
 
 .departure-board span.letter:before {
 	border-top: .07em solid rgba(0, 0, 0, .4);
@@ -353,14 +350,12 @@ section.bros {
 	-o-transform: translate(0, -.1em);
 }
 
-
 .departure-board span.fold {
 	display: block;
 	position: absolute;
 	height: 0;
 	top: .65em;
 }
-
 
 .departure-board span.flap {
 	display: block;
@@ -372,23 +367,18 @@ section.bros {
 	overflow: hidden;
 }
 
-
 .departure-board span.text {
 	width: 100%;
 }
 	
-
 .departure-board span.bottom {
 	top: .65em;
 }
-
 
 .departure-board span.bottom span.text {
 	position: relative;
 	top: -.65em;
 }
-	
-
 
 .departure-board span.flap.falling {
 	display: none;
@@ -431,13 +421,13 @@ section.bros {
 
 section.bros h2 {
   text-align: center;
-  color: #260f88;
-  font-size: 5em;
+  color: #0ecdb4;
+  font-size: 5vw;
+  letter-spacing: -0.02em;
+  text-align: center;
+  line-height: 0.8;
   font-weight: 400;
-  letter-spacing: 0;
   margin-top: 0;
-  line-height: 1;
-  text-transform: uppercase;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -446,10 +436,10 @@ section.bros h2 {
 
 section.bros h4 {
   text-align: center;
-  color: #260f88;
+  color: #181A18;
   font-size: 2em;
   letter-spacing: 0;
-  margin: 0 0 2em;
+  margin: 2.6em 0px 2em;
 }
 
 .section-gif h3 {
@@ -458,6 +448,31 @@ section.bros h4 {
   font-size: 2em;
   letter-spacing: 0;
   margin: 2em;
+}
+
+
+/* ABOUT */
+
+.descripcion  {
+  margin: 15em 0px 10em;
+  padding: 0 15em;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.descripcion p {
+  font-size: 5vw;
+  letter-spacing: -0.02em;
+  text-align: center;
+  line-height: 1.15;
+  margin: 0.33em 0px;
+  color: rgb(14, 205, 180);
+  font-weight: 700;
+  text-shadow: rgb(254, 155, 177) 3px 4px 0px;
 }
 
 /* WEBCAM */
@@ -492,9 +507,9 @@ section.bros h4 {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #260f88;
+  background-color: #181a18;
   color: white;
-  font-family: sofia-pro, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 100px;
   font-weight: 900;
   text-align: center;
@@ -517,11 +532,11 @@ section.bros h4 {
 #start-webcam-btn {
   -webkit-appearance: none;
   border: none;
-  background: #260f88;
+  background: #181a18;
   color: #fe9bb1;
   padding: 20px 40px;
   border-radius: 40px;
-  font-family: sofia-pro, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
   font-weight: 900;
 }
@@ -535,7 +550,7 @@ section.bros h4 {
   line-height: 1;
   transition: all 1s ease;
   z-index: 1;
-  font-family: sofia-pro, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .fondo-video {
@@ -543,7 +558,7 @@ section.bros h4 {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #260f88;
+  background-color: #181a18;
   position: absolute;
 }
 
@@ -564,7 +579,7 @@ section.bros h4 {
   font-size: 15px;
   font-weight: 900;
   color: #fe9bb1;
-  font-family: sofia-pro, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.25em;
 }
 
@@ -593,9 +608,9 @@ section.bros h4 {
 
 .blob {
   position: absolute;
-  width: 500px;
-  height: 500px;
-  top: 100px;
+  width: 360px;
+  height: 470px;
+  top: 65px;
   left: 50%;
   margin: -250px;
   background: transparent;
@@ -618,8 +633,8 @@ section.bros h4 {
           animation: skewing-child .2s ease-in-out infinite alternate;
 }
 .blob p:nth-child(1) span {
-  width: 50px;
-  height: 50px;
+  width: 263px;
+  height: 250px;
   margin: -25px;
   -webkit-animation: moving 8s cubic-bezier(0.97, 0.01, 0.12, 0.99) infinite alternate;
           animation: moving 8s cubic-bezier(0.97, 0.01, 0.12, 0.99) infinite alternate;
@@ -630,8 +645,8 @@ section.bros h4 {
           animation: squishing 5s ease-in-out infinite alternate;
 }
 .blob p:nth-child(2) span {
-  width: 120px;
-  height: 120px;
+  width: 263px;
+  height: 250px;
   top: 50%;
   left: 50%;
   margin: -60px;
@@ -656,7 +671,7 @@ section.bros h4 {
   left: 0;
   right: 0;
   margin: auto;
-  background-color: #260f88;
+  background-color: #181a18;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -668,7 +683,7 @@ section.bros h4 {
 }
 
 #new-gif {
-  font-family: sofia-pro, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 1em 3em;
   letter-spacing: 0.05em;
   font-size: 18px!important;
