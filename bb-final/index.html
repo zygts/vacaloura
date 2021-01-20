@@ -29,12 +29,12 @@
     </style>
 </head>
 <body>
-    <!-- <div class="link link--2" data-stick-cursor></div> -->
+    <div data-stick-cursor></div>
     <div class="cursor" data-cursor><div></div></div>
 
     <section class="logo" id="section-hero">
         <div id="logo-anim"></div>
-       <button id="bb-jugar" class="hvr-hang">
+       <button id="bb-jugar" class="hvr-hang" style="margin-left: -132px">
            <a href="#juego">
             creamos experiencias
            </a>
@@ -46,7 +46,7 @@
             <canvas id="pong" width="750" height="520"></canvas>
             <img class="bb-central" src="img/logo-1.svg">
         </div>
-        <button style="cursor: none;" id="bb-parar" class="hvr-hang">
+        <button style="cursor: none;margin-left: -227px;" id="bb-parar" class="hvr-hang">
             <a href="#section-bros">
              Paso de jugar más, llévame a los bros
             </a>
@@ -69,9 +69,9 @@
         </div>
         <div class="link link--1" data-stick-cursor>¿qué es un HUB?</div>
 
-        <div class="descripcion">
-            <p>Nuestra comunidad de expertos crea experiencias con equipos adhoc.</p>
-            <p>No son proveedores, son Partners en todo tipo de proyectos con un carácter sostenible, vanguardista<br> y eficaz.</p>
+        <div class="descripcion" data-splitting>
+            <p>Nuestra comunidad de<br> expertos crea experiencias<br> con equipos adhoc.</p>
+            <p>No son proveedores,<br> son Partners en todo tipo<br> de proyectos con un carácter<br> sostenible, vanguardista<br> y eficaz.</p>
         </div>
         
     </section>
@@ -96,16 +96,12 @@
         <div id="gif-logo"><img src="https://storage.googleapis.com/chydlx/codepen/random-gif-generator/giphy-logo.gif"/></div>
         <button id="new-gif">dame más</button>
 
-        <button id="bb-contacto" class="hvr-hang">
+        <button id="bb-contacto" class="hvr-hang" style="margin-left: -140px">
             <a href="/contacto/">
              Contacta con nosotros
             </a>
          </button>
     </section>
-
-    <div id="pixlee_container"></div>
-    <script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'null'});Pixlee.addSimpleWidget({widgetId:'null'});};</script>
-    <script src="//instafeed.assets.pxlecdn.com/assets/pixlee_widget_1_0_0.js"></script>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
@@ -117,6 +113,9 @@
     <script src="js/departure-board.js"></script>
     <script src="js/webcam.js"></script>
     <script src="js/gif.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     
     <script>
         $(document).ready(function(){
@@ -209,5 +208,49 @@ const airportLoop = function(){
 		}
 	});
     </script>
+
+<script>
+
+
+    Splitting();
+    
+      window.addEventListener("load", () => {
+      
+        function myCallback() {
+          var a = new TimelineMax();
+          let word = $('.descripcion .word > .char, .whitespace');
+    
+          return a.staggerFromTo(
+            word,
+            0.5,
+            {
+              y: -100,
+              opacity: 0
+            },
+            {
+              y: 0,
+              opacity: 1,
+              ease: Power2.ease
+            },
+            0.015
+          );
+        }
+      
+    
+      $(".descripcion").waypoint(
+        function(direction) {
+          if (direction === "down") {
+            // this.destroy();
+            myCallback();
+          }
+        },
+        {
+          offset: "100%"
+        }
+      );
+    });
+    
+    </script>
+
 </body>
 </html>
