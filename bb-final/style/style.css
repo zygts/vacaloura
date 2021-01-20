@@ -465,12 +465,23 @@ section.bros h4 {
 }
 
 .descripcion p {
-  font-size: 5vw;
+  font-size: 4vw;
   letter-spacing: -0.02em;
   text-align: center;
   line-height: 1.15;
   margin: 0.33em 0px;
   color: rgb(14, 205, 180);
+  font-weight: 700;
+  text-shadow: rgb(254, 155, 177) 3px 4px 0px;
+}
+
+.despedida p {
+  font-size: 6vw;
+  letter-spacing: -0.02em;
+  text-align: center;
+  line-height: 1.15;
+  margin: 0.33em 0px;
+  color: white;
   font-weight: 700;
   text-shadow: rgb(254, 155, 177) 3px 4px 0px;
 }
@@ -538,6 +549,7 @@ section.bros h4 {
   min-height: 80vh;
   position: relative;
   background-color: #FE9BB1;
+  z-index: 10;
 }
 
 #start-webcam-btn {
@@ -930,4 +942,9 @@ section.bros h4 {
     -webkit-transform: scale(0.9, 1);
             transform: scale(0.9, 1);
   }
+}
+
+
+.despedida {
+  margin: 10em 0 15em;
 }
