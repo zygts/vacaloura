@@ -948,3 +948,150 @@ section.bros h4 {
 .despedida {
   margin: 10em 0 15em;
 }
+
+.juego #juego-mobile {
+  display: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1000px){
+
+  body {
+    overflow: hidden;
+}
+
+.cursor {
+  display: none;
+}
+
+.juego #juego {
+  display: none;
+}
+
+.juego #juego-mobile {
+  display: block;
+}
+
+section.bros {
+  padding-top: 7em;
+}
+
+.noagencia {
+  display: flex;
+  flex-direction: column;
+}
+
+section.bros h2 {
+  font-size: 17vw;
+  position: relative;
+  left: auto;
+  transform: none;
+}
+
+.blob {
+  width: 300px;
+  height: 470px;
+  top: 0;
+  left: 50%;
+  margin: -220px;
+}
+
+section.bros h4 {
+  font-size: 2em;
+  margin: 0 0 50px;
+}
+
+.departure-board {
+  transform: scale(1.2);
+}
+
+.descripcion {
+  margin: 4em 0 0;
+  padding: 0 20px 4em;
+}
+
+.descripcion p {
+  font-size: 9vw;
+  text-shadow: rgb(254, 155, 177) 2px 2px 0px;
+}
+
+.webcam-brother {
+  min-height: auto;
+}
+
+#start-webcam-btn {
+  padding: 20px 40px;
+  font-size: 1em;
+  letter-spacing: .03em;
+}
+
+.webcam-brother canvas {
+  width: 100%!important;
+  height: calc(100vh - 13rem)!important;
+}
+
+#yaloeras {
+  font-size: 3em;
+  top: 35%;
+  color: #ffced9;
+}
+
+#boton-parar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: scale(.65);
+}
+
+.fondo-video {
+  height: calc(100vh - 13rem);
+}
+
+#contact-btn a {
+  font-size: 15px;
+  color: #000;
+}
+
+#contact-btn {
+  padding: 10px 0;
+  border-bottom: dotted #000 3px;
+}
+
+#yaloeras.off {
+  transform: translate(-50%, -35%)scale(.85);
+  color: white;
+}
+
+.section-gif h3 {
+  font-size: 9vw;
+  padding: 0 20px;
+  margin: 2em 0 2em;
+}
+
+#gif-wrap {
+  top: 25%;
+}
+
+#new-gif {
+  position: relative;
+  margin-top: 40px;
+}
+
+#bb-jugar, #bb-parar, #bb-contacto {
+  bottom: 20px;
+}
+
+
+.despedida {
+  margin: 6em 0 8em;
+}
+
+.despedida p {
+  font-size: 18vw;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+}
