@@ -218,6 +218,9 @@ let volveraJugar = document.createElement('button');
 
 
 botonJugar.onclick = function jugar(){
+
+    document.querySelector("body").classList.remove("not-ready")
+
     var loop = setInterval(game,18);
 
     botonParar.onclick = function parar(){

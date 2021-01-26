@@ -1,5 +1,3 @@
-
-
 var DepartureBoard = function (element, options) {
 	options = options || {};
 	
@@ -28,11 +26,7 @@ var DepartureBoard = function (element, options) {
 	}	
 };
 
-
 DepartureBoard.LETTERS = " ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,':()&!?+-";
-
-
-
 
 DepartureBoard.prototype.spin = function () {
 	var me = this;
@@ -45,9 +39,6 @@ DepartureBoard.prototype.spin = function () {
 		})(i);
 	}	
 };
-
-
-
 
 DepartureBoard.prototype.setValue = function (value) {
 	if (!(value instanceof Array)) value = [value];
@@ -66,13 +57,6 @@ DepartureBoard.prototype.setValue = function (value) {
 		}
 	}
 };
-
-
-
-
-
-
-
 
 DepartureBoard.Letter = function () {	
 	this._element = document.createElement ('span');
@@ -118,28 +102,18 @@ DepartureBoard.Letter = function () {
 	this._stopAt = null;
 };
 
-
 DepartureBoard.Letter.DROP_TIME = 100;
-
-
-
 
 DepartureBoard.Letter.prototype.getElement = function () {
 	return this._element;
 };
 
-
-
-
 DepartureBoard.Letter.prototype.spin = function (clear) {
 	if (clear !== false) this._stopAt = null;
 	
 	var me = this;	
-	this._interval = window.setInterval (function () { me._tick (); }, DepartureBoard.Letter.DROP_TIME * 1.1);
+	this._interval = window.setInterval (function () { me._tick (); }, DepartureBoard.Letter.DROP_TIME * .9);
 };
-
-
-
 
 DepartureBoard.Letter.prototype.setValue = function (value) {
 	this._stopAt = DepartureBoard.LETTERS.indexOf (value);
@@ -147,9 +121,6 @@ DepartureBoard.Letter.prototype.setValue = function (value) {
 	if (this._stopAt < 0) this._stopAt = 0;
 	if (!this._interval && this._index != this._stopAt) this.spin (false);
 };
-
-
-
 
 DepartureBoard.Letter.prototype._tick = function () {
 	var me = this,
@@ -200,3 +171,84 @@ DepartureBoard.Letter.prototype._tick = function () {
 		delete this._interval;
 	}
 };
+
+var board = new DepartureBoard (document.getElementById ('test'), { rowCount: 1, letterCount: 17 });
+
+const airportLoop = function(){
+	board.setValue (['HUB']);
+		window.setTimeout(function() {
+			board.setValue ('intercambiador');
+			window.setTimeout (function () {
+				board.setValue ('punto de conexion');
+				window.setTimeout (function () {
+					board.setValue (['HUB']);
+					window.setTimeout (function () {
+						board.setValue (['intercambiador']);
+						window.setTimeout (function () {
+							board.setValue (['punto de conexion']);
+							window.setTimeout (function () {
+								board.setValue (['hub']);
+								window.setTimeout (function () {
+									board.setValue (['intercambiador']);
+									window.setTimeout (function () {
+										board.setValue (['punto de conexion']);
+										window.setTimeout (function () {
+											board.setValue (['hub']);
+											window.setTimeout (function () {
+												board.setValue (['intercambiador']);
+												window.setTimeout (function () {
+													board.setValue (['punto de conexion']);
+													window.setTimeout (function () {
+														board.setValue (['hub']);
+														window.setTimeout (function () {
+															board.setValue (['intercambiador']);
+															window.setTimeout (function () {
+																board.setValue (['punto de conexion']);
+																window.setTimeout (function () {
+																	board.setValue (['hub']);
+																	window.setTimeout (function () {
+																		board.setValue (['intercambiador']);
+																		window.setTimeout (function () {
+                                                                            board.setValue (['punto de conexion']);
+                                                                            window.setTimeout (function () {
+                                                                                board.setValue (['hub']);
+                                                                                window.setTimeout (function () {
+                                                                                    board.setValue (['intercambiador']);
+                                                                                    window.setTimeout (function () {
+                                                                                        board.setValue (['punto de conexion']);
+                                                                                        window.setTimeout (function () {
+                                                                                            board.setValue (['hub']);
+                                                                                            window.setTimeout (function () {
+                                                                                                board.setValue (['intercambiador']);
+                                                                                                window.setTimeout (function () {
+                                                                                                    board.setValue (['punto de conexion']);
+                                                                                                }, 5000);
+                                                                                            }, 5000);
+                                                                                        }, 5000);
+                                                                                    }, 5000);
+                                                                                }, 5000);
+                                                                            }, 5000);
+																		}, 5000);
+																	}, 5000);
+																}, 5000);
+															}, 5000);
+														}, 5000);
+													}, 5000);
+												}, 5000);
+											}, 5000);
+										}, 5000);
+									}, 5000);
+								}, 5000);
+							}, 5000);
+						}, 5000);
+					}, 5000);
+				}, 5000);
+			}, 5000);
+		}, 4000);
+	}
+	console.clear();
+	ScrollOut({
+		onShown: function(el) {
+			airportLoop();
+		}
+	});

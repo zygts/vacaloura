@@ -28,15 +28,16 @@
         }
     </style>
 </head>
-<body>
+<body class="not-ready">
     <div data-stick-cursor></div>
     <div class="cursor" data-cursor><div></div></div>
 
     <section class="logo" id="section-hero">
         <div id="logo-anim"></div>
-       <button id="bb-jugar" class="hvr-hang" style="margin-left: -132px">
+        <h1>La no agencia</h1>
+       <button id="bb-jugar" class="hvr-hang" style="margin-left: -217px">
            <a href="#juego">
-            creamos experiencias
+            Creamos experiencias. Compruébalo.
            </a>
         </button>
     </section>
@@ -55,7 +56,7 @@
     </section>
 
     <section class="bros" id="section-bros">
-
+        <img class="logo-2" src="img/logo-2.svg">
         <div class="noagencia" data-scroll>
             <h2>Somos la <br><span style="color: black">no</span><br> agencia</h2>
             <div class="blob">
@@ -71,14 +72,16 @@
         <div class="link link--1" data-stick-cursor>¿qué es un HUB?</div>
 
         <div class="descripcion" data-splitting>
-            <p>Nuestra comunidad de<br> expertos crea experiencias<br> con equipos adhoc.</p>
-            <p>No son proveedores,<br> son Partners en todo tipo<br> de proyectos con un carácter<br> sostenible, vanguardista<br> y eficaz.</p>
+            <p>No tenemos filosofía,<br> tenemos experiencia.</p>
+            <p>No seguimos las reglas,<br> las creamos.</p>
+            <p>No tenemos proveedores,<br> tenemos brothers..</p>
         </div>
         
     </section>
     
     <section class="webcam-brother">
         <button id="start-webcam-btn">Haz click para ser un brother</button>
+        <span>Sonríe, acepta la cámara y haz click aquí para ser un brother</span>
         <div id="content" class="content">
             <span id="yaloeras" class="hidden">Ya eras un brother, no lo sabías?</span>
             <video id="video" class="hidden"></video>
@@ -126,93 +129,13 @@
     <script>
         $(document).ready(function(){
             setTimeout(function(){
+                $('h1').addClass('animate');
+            }, 6000);
+            setTimeout(function(){
                 $('#bb-jugar').addClass('animate');
                 $('#bb-parar').addClass('animate');
-            }, 5000)
+            }, 7000)
         })
-    </script>
-
-    <script>
-        var board = new DepartureBoard (document.getElementById ('test'), { rowCount: 1, letterCount: 17 });
-
-const airportLoop = function(){
-	board.setValue (['HUB']);
-		window.setTimeout(function() {
-			board.setValue ('intercambiador');
-			window.setTimeout (function () {
-				board.setValue ('punto de conexion');
-				window.setTimeout (function () {
-					board.setValue (['HUB']);
-					window.setTimeout (function () {
-						board.setValue (['intercambiador']);
-						window.setTimeout (function () {
-							board.setValue (['punto de conexion']);
-							window.setTimeout (function () {
-								board.setValue (['hub']);
-								window.setTimeout (function () {
-									board.setValue (['intercambiador']);
-									window.setTimeout (function () {
-										board.setValue (['punto de conexion']);
-										window.setTimeout (function () {
-											board.setValue (['hub']);
-											window.setTimeout (function () {
-												board.setValue (['intercambiador']);
-												window.setTimeout (function () {
-													board.setValue (['punto de conexion']);
-													window.setTimeout (function () {
-														board.setValue (['hub']);
-														window.setTimeout (function () {
-															board.setValue (['intercambiador']);
-															window.setTimeout (function () {
-																board.setValue (['punto de conexion']);
-																window.setTimeout (function () {
-																	board.setValue (['hub']);
-																	window.setTimeout (function () {
-																		board.setValue (['intercambiador']);
-																		window.setTimeout (function () {
-                                                                            board.setValue (['punto de conexion']);
-                                                                            window.setTimeout (function () {
-                                                                                board.setValue (['hub']);
-                                                                                window.setTimeout (function () {
-                                                                                    board.setValue (['intercambiador']);
-                                                                                    window.setTimeout (function () {
-                                                                                        board.setValue (['punto de conexion']);
-                                                                                        window.setTimeout (function () {
-                                                                                            board.setValue (['hub']);
-                                                                                            window.setTimeout (function () {
-                                                                                                board.setValue (['intercambiador']);
-                                                                                                window.setTimeout (function () {
-                                                                                                    board.setValue (['punto de conexion']);
-                                                                                                }, 7000);
-                                                                                            }, 7000);
-                                                                                        }, 7000);
-                                                                                    }, 7000);
-                                                                                }, 7000);
-                                                                            }, 7000);
-																		}, 7000);
-																	}, 7000);
-																}, 7000);
-															}, 7000);
-														}, 7000);
-													}, 7000);
-												}, 7000);
-											}, 7000);
-										}, 7000);
-									}, 7000);
-								}, 7000);
-							}, 7000);
-						}, 7000);
-					}, 7000);
-				}, 7000);
-			}, 7000);
-		}, 7000);
-	}
-	console.clear();
-	ScrollOut({
-		onShown: function(el) {
-			airportLoop();
-		}
-	});
     </script>
 
 <script>
