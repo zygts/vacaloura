@@ -19,11 +19,11 @@ body {
     height: auto;
     overflow: visible;
 }
-
+/* 
 body.not-ready {
   overflow: hidden;
   height: 100vh;
-}
+} */
 
 section.logo {
   background-color: #fff;
@@ -363,10 +363,10 @@ section.bros h4 {
 
 .section-gif h3 {
   text-align: center;
-  color: #fff;
-  font-size: 2em;
-  letter-spacing: 0;
-  margin: 3em 0 0;
+  font-size: 5vw;
+  color: #ffffff;
+  text-shadow: rgb(254 155 177) 3px 4px 0px;
+  margin: 1.5em 0 2em;
 }
 
 
@@ -623,8 +623,8 @@ section.bros h4 {
 
 #gif-wrap {
   position: absolute;
-  top: 15%;
-  bottom: 20%;
+  top: 20%;
+  bottom: 15%;
   left: 0;
   right: 0;
   margin: auto;
