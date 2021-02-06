@@ -78,6 +78,7 @@ h1.animate {
 }
 
 #bb-jugar,
+#bb-jugar-mobile,
 #bb-parar,
 #bb-contacto {
     position: absolute;
@@ -92,6 +93,7 @@ h1.animate {
 }
 
 #bb-jugar.animate,
+#bb-jugar-mobile.animate,
 #bb-contacto.animate,
 #bb-parar.animate {
   opacity: 1;
@@ -99,6 +101,7 @@ h1.animate {
 }
 
 #bb-jugar a,
+#bb-jugar-mobile a,
 #bb-contacto a,
 #bb-parar a {
     color: #181A18;
@@ -109,6 +112,10 @@ h1.animate {
     display: block;
     padding: 20px 0;
     font-family: 'Montserrat', sans-serif;
+}
+
+#bb-jugar-mobile {
+  display: none;
 }
 
 #bb-contacto {
@@ -217,7 +224,133 @@ section.bros {
 }
 
 
-/* DEPARTURE BOARD */
+/* SNAKE GAME */
+
+/* GAME BOARD STYLES */
+#gameContainer {
+  /*
+	width and height of .gameBoardPixel should 1/40 of the width and height of #gameContainer,
+	because it is used in calculation in the jscript.js file
+	*/
+  width: 40vw;
+  height: 40vw;
+  margin: 5vw auto;
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+}
+
+.gameBoardPixel {
+  /* background-color: slategrey; */
+  /*
+	width and height of .gameBoardPixel should 1/40 of the width and height of #gameContainer,
+	because it is used in calculation in the jscript.js file
+	*/
+  width: 1vw;
+  height: 1vw;
+  border-radius: 10px;
+  float: left;
+}
+/* GAME BOARD STYLES END*/
+
+/* SNAKE STYLES */
+.snakeBodyPixel {
+  background-color: #fe9bb1;
+  box-shadow: 0 0 5px #fe9bb1;
+}
+/* SNAKE STYLES END*/
+
+/* FOOD STYLES */
+.food {
+  background-color: #fff;
+}
+/* FOOD STYLES END*/
+
+/* SCORE STYLES */
+#scoreContainer {
+  width: 40vw;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.scoreBoard {
+  color: white;
+  display: block;
+  padding: 0;
+  width: 100%;
+  font-weight: 700;
+  text-align: center;
+}
+/* SCORE STYLES END */
+
+/* Hide #onScreenControllers on desktop */
+#onScreenControllers {
+  display: none;
+}
+
+.developerDetails {
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  color: #0c1021;
+  font-family: monospace;
+}
+
+.developerDetails a {
+  color: #0c1021;
+}
+
+@media only screen and (max-width: 768px) {
+  /* MOBILE */
+  #gameContainer {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .gameBoardPixel {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  #scoreContainer {
+    width: 80vw;
+  }
+
+  #onScreenControllers {
+    width: 80vw;
+    margin: 5vw auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #onScreenControllers > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #onScreenControllers button {
+    background-color: #fe9bb1;
+    height: 14vw;
+    width: 14vw;
+    font-size: 10vw;
+    border: none;
+    margin: 20px;
+  }
+
+  #onScreenControllers button:focus {
+    outline: none;
+  }
+
+  #onScreenControllers button:active {
+    background-color: slategray;
+  }
+}
+
+
+
+/* AEROPUERTO */
 
 .departure-board {
     padding:  0.36em;
@@ -997,140 +1130,184 @@ section.bros h4 {
 
 @media (max-width: 1000px){
 
-  body {
-    overflow: hidden;
-}
+    body {
+        overflow: hidden;
+    }
 
-.cursor {
-  display: none;
-}
+    .cursor {
+      display: none;
+    }
 
-.juego #juego {
-  display: none;
-}
+    .juego #juego {
+      display: none;
+    }
 
-.juego #juego-mobile {
-  display: block;
-}
+    .juego #juego-mobile {
+      display: block;
+    }
 
-section.bros {
-  padding-top: 7em;
-}
+    #bb-jugar {
+      display: none;
+    }
 
-.noagencia {
-  display: flex;
-  flex-direction: column;
-}
+    #bb-jugar-mobile {
+      display: block;
+      border-bottom: none;
+    }
 
-section.bros h2 {
-  font-size: 17vw;
-  position: relative;
-  left: auto;
-  transform: none;
-}
+    #bb-parar {
+      border-bottom: none;
+      width: 80%;
+      margin-left: -167px!important;
+    }
 
-.blob {
-  width: 300px;
-  height: 470px;
-  top: 0;
-  left: 50%;
-  margin: -220px;
-}
+    h1 {
+      bottom: 105px;
+      left: 20%;
+      transform: translateX(-4%);
+      font-size: 9vw;
+      text-shadow: rgb(254 155 177) 3px 4px 0px;
+  }
 
-section.bros h4 {
-  font-size: 2em;
-  margin: 0 0 50px;
-}
+    section.bros {
+      padding-top: 7em;
+    }
 
-.departure-board {
-  transform: scale(1.2);
-}
+    .noagencia {
+      display: flex;
+      flex-direction: column;
+    }
 
-.descripcion {
-  margin: 4em 0 0;
-  padding: 0 20px 4em;
-}
+    section.bros h2 {
+      font-size: 17vw;
+      position: relative;
+      left: auto;
+      transform: none;
+    }
 
-.descripcion p {
-  font-size: 9vw;
-  text-shadow: rgb(254, 155, 177) 2px 2px 0px;
-}
+    .blob {
+      width: 300px;
+      height: 470px;
+      top: 0;
+      left: 50%;
+      margin: -220px;
+    }
 
-.webcam-brother {
-  min-height: auto;
-}
+    .link--1 {
+      display: none;
+    }
 
-#start-webcam-btn {
-  padding: 20px 40px;
-  font-size: 1em;
-  letter-spacing: .03em;
-}
+    section.bros h4 {
+      font-size: 2em;
+      margin: 0 0 50px;
+    }
 
-.webcam-brother canvas {
-  width: 100%!important;
-  height: calc(100vh - 13rem)!important;
-}
+    .departure-board {
+      transform: scale(1.2);
+    }
 
-#yaloeras {
-  font-size: 3em;
-  top: 35%;
-  color: #ffced9;
-}
+    .descripcion {
+      margin: 4em 0 0;
+      padding: 0 20px 4em;
+    }
 
-#boton-parar {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: scale(.65);
-}
+    .descripcion p {
+      font-size: 12vw;
+      text-shadow: rgb(254, 155, 177) 2px 2px 0px;
+    }
 
-.fondo-video {
-  height: calc(100vh - 13rem);
-}
+    .webcam-brother {
+      min-height: auto;
+    }
 
-#contact-btn a {
-  font-size: 15px;
-  color: #000;
-}
+    .webcam-brother > span {
+      position: absolute;
+      bottom: 27%;
+      width: 80%;
+      left: 50%;
+      text-align: center;
+      transform: translateX(-50%);
+  }
 
-#contact-btn {
-  padding: 10px 0;
-  border-bottom: dotted #000 3px;
-}
+    #start-webcam-btn {
+      padding: 20px 40px;
+      font-size: 1em;
+      letter-spacing: .03em;
+    }
 
-#yaloeras.off {
-  transform: translate(-50%, -35%)scale(.85);
-  color: white;
-}
+    .webcam-brother canvas {
+      width: 100%!important;
+      height: calc(100vh - 13rem)!important;
+    }
 
-.section-gif h3 {
-  font-size: 9vw;
-  padding: 0 20px;
-  margin: 2em 0 2em;
-}
+    #yaloeras {
+      font-size: 3em;
+      top: 35%;
+      color: #ffced9;
+    }
 
-#gif-wrap {
-  top: 25%;
-}
+    #boton-parar {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transform: scale(.65);
+    }
 
-#new-gif {
-  position: relative;
-  margin-top: 40px;
-}
+    .fondo-video {
+      height: calc(100vh - 13rem);
+    }
 
-#bb-jugar, #bb-parar, #bb-contacto {
-  bottom: 20px;
-}
+    #contact-btn a {
+      font-size: 15px;
+      color: #000;
+    }
 
+    #contact-btn {
+      padding: 10px 0;
+      border-bottom: dotted #000 3px;
+    }
 
-.despedida {
-  margin: 6em 0 8em;
-}
+    #yaloeras.off {
+      transform: translate(-50%, -35%)scale(.85);
+      color: white;
+    }
 
-.despedida p {
-  font-size: 18vw;
-  letter-spacing: -0.02em;
-  line-height: 1;
-}
+    .section-gif h3 {
+      font-size: 9vw;
+      padding: 0 20px;
+      margin: 2em 0 2em;
+    }
+
+    #gif-wrap {
+      top: 25%;
+    }
+
+    .section-gif {
+      position: relative;
+      height: 59vh;
+    }
+
+    #new-gif {
+      position: relative;
+      margin-top: 96px;
+  }
+
+    #bb-jugar, #bb-parar {
+      bottom: 20px;
+    }
+
+    #bb-contacto {
+      bottom: -90px;
+    }
+
+    .despedida {
+      margin: 13em 0 8em;
+    }
+
+    .despedida p {
+      font-size: 18vw;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
 
 }

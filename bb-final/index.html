@@ -35,11 +35,16 @@
     <section class="logo" id="section-hero">
         <div id="logo-anim"></div>
         <h1>La no agencia</h1>
-       <button id="bb-jugar" class="hvr-hang" style="margin-left: -217px">
+       <button id="bb-jugar" class="bb-jugar hvr-hang" style="margin-left: -217px">
            <a href="#juego">
             Creamos experiencias. Compruébalo.
            </a>
         </button>
+        <button id="bb-jugar-mobile" class="bb-jugar" style="margin-left: -135px">
+            <a href="#juego-mobile">
+             Creamos experiencias<br> Compruébalo
+            </a>
+         </button>
     </section>
 
     <section class="juego">
@@ -47,7 +52,22 @@
             <canvas id="pong" width="750" height="520"></canvas>
             <img class="bb-central" src="img/logo-1.svg">
         </div>
-        <div id="juego-mobile"></div>
+
+        <div id="juego-mobile">
+            <div id="gameContainer"></div>
+            <div id="scoreContainer">
+                <div class="scoreBoard">Puntuación: <span id="pointsEarned">0</span></div>
+                <div style="display: none;" class="scoreBoard">Blocks: <span id="blocksTravelled">0</span></div>
+            </div>
+            <div id="onScreenControllers">
+                <button id="leftButton">ᐊ</button>
+                <div>
+                    <button id="upButton">ᐃ</button>
+                    <button id="downButton">ᐁ</button>
+                </div>
+                <button id="rightButton">ᐅ</button>
+            </div>
+        </div>
         <button style="cursor: none;margin-left: -227px;" id="bb-parar" class="hvr-hang">
             <a href="#section-bros">
              Paso de jugar más, llévame a los bros
@@ -116,9 +136,10 @@
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="js/jquery.visible.min.js"></script>
     <script src="js/lottie.js"></script>
-    <script src="js/logo.js"></script>
     <script src="js/pong.js"></script>
+    <script src="js/snake.js"></script>
     <script src="js/cursor.js"></script>
+    <script src="js/logo.js"></script>
     <script src="js/departure-board.js"></script>
     <script src="js/webcam.js"></script>
     <script src="js/gif.js"></script>
@@ -133,6 +154,7 @@
             }, 6000);
             setTimeout(function(){
                 $('#bb-jugar').addClass('animate');
+                $('#bb-jugar-mobile').addClass('animate');
                 $('#bb-parar').addClass('animate');
             }, 7000)
         })

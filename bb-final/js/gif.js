@@ -30,7 +30,6 @@ $(document).ready(function() {
 
 	// Display Gif in gif wrap container
 	var renderGif = _giphy => {
-		console.log(_giphy);
 		// Set gif as bg image
 		$gif_wrap.css({
 			"background-image": 'url("' + _giphy.image_original_url + '")'

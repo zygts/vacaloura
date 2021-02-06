@@ -207,9 +207,10 @@ function game(){
 };
 
 
-//call the game function 50 times every 1 Sec
+//Start the game
 
 let botonJugar = document.getElementById('bb-jugar');
+let botonJugarMobile = document.getElementById('bb-jugar-mobile');
 let botonParar = document.getElementById('bb-parar');
 let seccionLogo = document.getElementById('section-hero');
 let seccionJuego = document.getElementById('juego');
@@ -241,3 +242,12 @@ volveraJugar.onclick = function jugar(){
     var loop = setInterval(game,18);
     seccionJuego.removeChild(volveraJugar);
 };
+
+botonJugarMobile.onclick = function jugarMobile(){
+
+    document.querySelector("body").classList.remove("not-ready")
+    seccionLogo.classList.add('fade-out');
+    setTimeout(function(){
+        seccionLogo.style.display = "none";
+    }, 500);
+}
