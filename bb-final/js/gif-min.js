@@ -1,0 +1,1 @@
+$(document).ready((function(){const a="https://api.giphy.com/v1/gifs/",i="0UTRbFtkMxAplrohufYco5IY74U8hOes",g="fail",e="random",t="pg-13",c=$("#gif-wrap");let n=encodeURI(a+e+"?api_key="+i+"&tag="+g+"&rating="+t);var o=()=>$.getJSON(n,(a=>r(a.data))),r=a=>{c.css({"background-image":'url("'+a.image_original_url+'")'})};o();$("#new-gif").click(o)}));

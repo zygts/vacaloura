@@ -1,0 +1,1 @@
+function start(){var e={container:document.getElementById("logo-anim"),renderer:"svg",loop:!1,autoplay:!0,rendererSettings:{progressiveLoad:!1,preserveAspectRatio:"xMidYMax slice"},path:"js/logo-anim2.json"};bodymovin.loadAnimation(e)}start();
