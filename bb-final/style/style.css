@@ -25,6 +25,25 @@ body.not-ready {
   height: 100vh;
 }
 
+#pong{
+  border: none;
+  position: absolute;
+  margin :auto;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+}
+
+#juego {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 section.logo {
   background-color: #fff;
   z-index: 2;
@@ -515,7 +534,6 @@ section.bros h4 {
 
 .descripcion  {
   margin: 15em 0 0;
-  padding: 0 15em 10em;
   display: flex;
   width: 100%;
   height: 100%;
@@ -1171,6 +1189,7 @@ section.bros h4 {
 
     section.bros {
       padding-top: 7em;
+      background: white;
     }
 
     .noagencia {
