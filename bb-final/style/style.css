@@ -337,7 +337,7 @@ section.bros {
   }
 
   #onScreenControllers {
-    width: 80vw;
+    width: 60vw;
     margin: 5vw auto;
     display: flex;
     justify-content: space-evenly;
@@ -355,7 +355,9 @@ section.bros {
     width: 14vw;
     font-size: 10vw;
     border: none;
-    margin: 20px;
+    display: flex;
+    margin: 10px;
+    justify-content: center;
   }
 
   #onScreenControllers button:focus {
@@ -1175,7 +1177,7 @@ section.bros h4 {
 
     #bb-parar {
       border-bottom: none;
-      width: 80%;
+      width: 90%;
       margin-left: -167px!important;
     }
 
