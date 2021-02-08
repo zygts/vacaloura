@@ -1228,6 +1228,8 @@ section.bros h4 {
     .descripcion {
       margin: 4em 0 0;
       padding: 0 20px 4em;
+      max-width: 100vw;
+      width: auto;
     }
 
     .descripcion p {
